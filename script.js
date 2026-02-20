@@ -70,15 +70,14 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     from_email: email,
     subject: subject,
     message: message,
-    to_email: "laibakhansulaimankhail@gmail.com, info@paf-iast.edu.pk",
+    to_email: "laibakhansulaimankhail@gmail.com",
   };
 
   emailjs
     .send(serviceID, templateID, templateParams)
     .then(() => {
       feedback.className = "form-feedback success";
-      feedback.innerHTML =
-        "✓ Message sent to laibakhansulaimankhail@gmail.com and your university";
+      feedback.innerHTML = "✓ Message sent to laibakhansulaimankhail@gmail.com";
       this.reset();
     })
     .catch((err) => {
